@@ -91,20 +91,25 @@ public class Hotel {
     }
 
 
-
-    static void availability()
-    {
-        int j,count=0;
-
-
-                for(j=0;j<10;j++)
-                {
-                    if(room.room[j]==null)
+    static void availability(int ch2) {
+        int j, count = 0;
+        switch (ch2) {
+            case 1:
+                for (j = 0; j < 10; j++) {
+                    if (room.singleroom[j] == null)
                         count++;
                 }
+                break;
 
-        System.out.println("Number of rooms available : "+count);
+            case 2:
+                for (j = 0; j < 10; j++) {
+                    if (room.doubleroom[j] == null)
+                        count++;
+                }
+                break;
+            default:
+                System.out.println("Select valid option");
+        }
+        System.out.println("Number of rooms available : " + count);
     }
-
-
 }

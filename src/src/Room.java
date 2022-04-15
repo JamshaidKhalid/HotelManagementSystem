@@ -73,5 +73,8 @@ public class Room {
     }
 
 
-    Room room[]=new Room[10]; //new Rooms
+
+
+    Room singleroom[]=new Room[10]; //new Rooms
+    Room doubleroom[]=new Room[10]; //new Rooms
 }

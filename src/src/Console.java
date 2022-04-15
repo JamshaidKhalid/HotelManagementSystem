@@ -24,15 +24,13 @@ public class Console {
                 ch = sc.nextInt();
                 switch(ch){
                     case 1:
-                        Hotel.availability();
+                        System.out.println("\nSelect Room Type\n1: Single\n2: Double");
+                        ch2 = sc.nextInt();
+                        Hotel.availability(ch2);
                         break;
-//                    case 2:System.out.println("\nChoose room type :\n1.Luxury Double Room \n2.Deluxe Double Room \n3.Luxury Single Room\n4.Deluxe Single Room\n");
-//                        ch2 = sc.nextInt();
-//                        Hotel.availability();
-//                        break;
-//                    case 3:System.out.println("\nChoose room type :\n1.Luxury Double Room \n2.Deluxe Double Room \n3.Luxury Single Room\n4.Deluxe Single Room\n");
-//                        ch2 = sc.nextInt();
-//                        Hotel.bookroom(ch2);
+
+                    case 2:System.out.println("\nChoose room type :\n1.Luxury Double Room \n2.Deluxe Double Room \n3.Luxury Single Room\n4.Deluxe Single Room\n");
+//                        Hotel.bookroom();
 //                        break;
 //                    case 4:
 //                        System.out.print("Room Number -");
