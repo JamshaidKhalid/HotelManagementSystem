@@ -136,7 +136,7 @@ public class Hotel {
                     rn--;
                     if (room.singleroom[rn] != null)
                         System.out.println("Room Not Available");
-                    guest.guestDetails(i,rn,room);
+                    guest.guestDetails(i, rn, room);
                 } catch (Exception e) {
                     System.out.println("Invalid Option");
                     return;
@@ -166,4 +166,7 @@ public class Hotel {
         }
         System.out.println("Room Booked");
     }
+
+
+
 }

@@ -12,6 +12,9 @@ public class Console {
         {
             Scanner sc = new Scanner(System.in);
             Hotel bookRoom = new Hotel("myHotel");
+            Room room = new Room();
+            Guest guest = new Guest();
+
             int ch,ch2;
             char wish;
             String pin;
@@ -21,7 +24,7 @@ public class Console {
 
             do{
 
-                System.out.println("\nEnter your choice :\n1.Display room availability \n2.Book a room\n3.Checkout\n4.Exit\n");
+                System.out.println("\nEnter your choice :\n1.Check room availability \n2.Book a room\n3.Checkin\n4.Exit\n");
                 ch = sc.nextInt();
                 switch(ch){
                     case 1:
@@ -34,9 +37,9 @@ public class Console {
                         System.out.println("\nChoose room type :\n1. Single Room \n2. Double Room\n");
                         ch2 = sc.nextInt();
                         bookRoom.bookroom(ch2);
-//                      break;
-//                    case 4:
-//                        System.out.print("Room Number -");
+                      break;
+                    case 3:
+                        guest.Checkin(room);
 //                        ch2 = sc.nextInt();
 //                        if(ch2>60)
 //                            System.out.println("Room doesn't exist");

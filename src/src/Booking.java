@@ -3,20 +3,21 @@ package src;
 import java.time.LocalDateTime;
 
 public class Booking {
-    private String reference;
     private Guest guest;
     private Room room;
     private LocalDateTime start;
     private LocalDateTime end;
     private BookingStatus status;
-    private Action[] actions;
+    private ActionType actions;
 
-    public String getReference() {
-        return reference;
-    }
-
-    public void setReference(String reference) {
-        this.reference = reference;
+    public Booking(){}
+    public Booking(Guest guest, Room room, LocalDateTime start, LocalDateTime end, BookingStatus status, ActionType actions) {
+        this.guest = guest;
+        this.room = room;
+        this.start = start;
+        this.end = end;
+        this.status = status;
+        this.actions = actions;
     }
 
     public Guest getGuest() {
@@ -59,11 +60,11 @@ public class Booking {
         this.status = status;
     }
 
-    public Action[] getActions() {
+    public ActionType getActions() {
         return actions;
     }
 
-    public void setActions(Action[] actions) {
+    public void setActions(ActionType actions) {
         this.actions = actions;
     }
 }
