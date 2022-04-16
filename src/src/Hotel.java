@@ -1,7 +1,10 @@
 package src;
 
+import java.util.Scanner;
+
 public class Hotel {
     static Room room = new Room();
+    Guest guest = new Guest();
 
 
     private String name;
@@ -111,5 +114,56 @@ public class Hotel {
                 System.out.println("Select valid option");
         }
         System.out.println("Number of rooms available : " + count);
+    }
+
+
+    public void bookroom(int i) {
+        int j;
+        int rn;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\nChoose room number from : ");
+        switch (i) {
+            case 1:
+                System.out.println(room.singleroom);
+                for (j = 0; j < room.singleroom.length; j++) {
+                    if (room.singleroom[j] == null) {
+                        System.out.print(j + 1 + ",");
+                    }
+                }
+                System.out.print("\nEnter room number: ");
+                try {
+                    rn = sc.nextInt();
+                    rn--;
+                    if (room.singleroom[rn] != null)
+                        System.out.println("Room Not Available");
+                    guest.guestDetails(i,rn,room);
+                } catch (Exception e) {
+                    System.out.println("Invalid Option");
+                    return;
+                }
+                break;
+            case 2:
+                for (j = 0; j < room.doubleroom.length; j++) {
+                    if (room.doubleroom[j] == null) {
+                        System.out.print(j + 11 + ",");
+                    }
+                }
+                System.out.print("\nEnter room number: ");
+                try {
+                    rn = sc.nextInt();
+                    rn = rn - 11;
+                    if (room.doubleroom[rn] != null)
+                        System.out.println("Room Not Available");
+//                    CustDetails(i,rn);
+                } catch (Exception e) {
+                    System.out.println("Invalid Option");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Enter valid option");
+                break;
+        }
+        System.out.println("Room Booked");
     }
 }

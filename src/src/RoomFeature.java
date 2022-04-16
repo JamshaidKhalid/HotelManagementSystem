@@ -3,5 +3,9 @@ package src;
 public enum RoomFeature {
     Balcony,
     Seaview,
-    Kitchen
+    Kitchen;
+
+    RoomFeature() {
+
+    }
 }

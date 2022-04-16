@@ -11,6 +11,7 @@ public class Console {
         try
         {
             Scanner sc = new Scanner(System.in);
+            Hotel bookRoom = new Hotel("myHotel");
             int ch,ch2;
             char wish;
             String pin;
@@ -29,9 +30,11 @@ public class Console {
                         Hotel.availability(ch2);
                         break;
 
-                    case 2:System.out.println("\nChoose room type :\n1.Luxury Double Room \n2.Deluxe Double Room \n3.Luxury Single Room\n4.Deluxe Single Room\n");
-//                        Hotel.bookroom();
-//                        break;
+                    case 2:
+                        System.out.println("\nChoose room type :\n1. Single Room \n2. Double Room\n");
+                        ch2 = sc.nextInt();
+                        bookRoom.bookroom(ch2);
+//                      break;
 //                    case 4:
 //                        System.out.print("Room Number -");
 //                        ch2 = sc.nextInt();

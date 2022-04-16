@@ -1,26 +1,42 @@
 package src;
 
 public class Room {
-    private String number;
+    private int number;
     private String floor;
     private String section;
     private double area;
     private double rate;
     private RoomType type;
-    private RoomFeature[] features;
+    private RoomFeature features;
 
     //constructor
     public Room(){}
 
-    public Room(String number) {
+    Guest guest = new Guest();
+
+
+    public Room(int id, String name, String contact, String gender, int number, String floor, double area, double rate, RoomType type, RoomFeature features) {
+        guest.setId(id);
+        guest.setName(name);
+        guest.setGender(gender);
+        guest.setContact(contact);
+        this.number = number;
+        this.floor = floor;
+        this.area = area;
+        this.rate = rate;
+        this.type = type;
+        this.features = features;
+    }
+
+    public Room(int number) {
         this.number = number;
     }
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
@@ -64,11 +80,11 @@ public class Room {
         this.type = type;
     }
 
-    public RoomFeature[] getFeatures() {
+    public RoomFeature getFeatures() {
         return features;
     }
 
-    public void setFeatures(RoomFeature[] features) {
+    public void setFeatures(RoomFeature features) {
         this.features = features;
     }
 
